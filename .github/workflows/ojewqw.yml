@@ -1,12 +1,12 @@
-name: Update epic trending field
+name: cfvgbhjk
 
 on:
   issue_comment:
     types:
       - created
 jobs:
-  update-epic-trending-field:
-    uses: grafana/github-actions-testrepo/.github/workflows/update-trending-base.yml@main
+  bababa:
+    uses: yosiroute/grijhenzui/.github/workflows/ojewqw-base.yml@main
     with:
       project_number: 582
       github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
