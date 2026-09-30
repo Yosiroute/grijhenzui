@@ -1,14 +1,13 @@
-name: cfvgbhjk
+name: xdfgthyuj
 
 on:
   issue_comment:
     types:
       - created
 jobs:
-  bababa:
-    uses: yosiroute/grijhenzui/.github/workflows/ojewqw-base.yml@main
+  update-epic-trending-field:
+    uses: grafana/github-actions-testrepo/.github/workflows/update-trending-base.yml@main
     with:
       project_number: 582
       github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
     secrets: inherit
-
