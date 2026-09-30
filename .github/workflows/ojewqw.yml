@@ -1,13 +1,18 @@
-name: xdfgthyuj
+name: PR Comment Echo
 
 on:
   issue_comment:
-    types:
-      - created
+    types: [created]
+
 jobs:
-  update-epic-trending-field:
-    uses: grafana/github-actions-testrepo/.github/workflows/update-trending-base.yml@main
-    with:
-      project_number: 582
-      github_token: ${{ secrets.TEST_ACCESS_TOKEN }}
-    secrets: inherit
+  echo-readme:
+    if: github.event.issue.pull_request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR code
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ github.event.issue.number }}/head
+
+      - name: Echo README
+        run: cat README.md
