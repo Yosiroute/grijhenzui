@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     if: |
       github.event.issue.pull_request &&
-      github.event.sender.login == 'ianstormtaylor' &&
+      github.event.sender.login == 'yosiroute' &&
       startsWith(github.event.comment.body, '/release:next')
     steps:
       - name: Checkout repo
